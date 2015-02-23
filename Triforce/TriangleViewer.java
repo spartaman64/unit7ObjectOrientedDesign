@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import java.awt.event.ActionEvent;
 import java.awt.geom.Line2D;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseEvent;
 
 public class TriangleViewer
 {
@@ -22,16 +24,22 @@ public class TriangleViewer
        frame.setVisible(true);
     }
     
-   public class ClickListener implements ActionListener
+   class MousePressListener implements MouseListener     
    {
-      public void actionPerformed(ActionEvent event)
+      public void mousePressed(MouseEvent event)
       {
-          
+          int x = event.getX();
+          int y = event.getY();
       }
+      public void mouseReleased(MouseEvent event){}
+      public void mouseClicked(MouseEvent event){}
+      public void mouseEntered(MouseEvent event){}
+      public void mouseExited(MouseEvent event){}
    }
    
-   public class Triangle
+   public class TriangleFrame extends JFrame
    {
+       
     }
     
    public static void main(String[] args)

@@ -1,7 +1,7 @@
 /**
    A country with a name and area.
 */
-public class Country implements Measurable
+public class Country implements Measurable 
 {
    private String name;
    private double area;
