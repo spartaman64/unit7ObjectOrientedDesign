@@ -76,7 +76,7 @@ public class Card {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
 		if (this.suit.equals(otherCard.suit) &&
 		this.rank.equals(otherCard.rank) &&
-		this.pointValue.equals(otherCard.pointValue))
+		this.pointValue == otherCard.pointValue)
 		{
 		    return true;
 		  }
@@ -98,6 +98,8 @@ public class Card {
 	 */
 	@Override
 	public String toString() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */	
+		String str = rank + " of "+ suit+" (point value = "+pointValue+")";
+		return str;
 	}
 }
