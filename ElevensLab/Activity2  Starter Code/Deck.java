@@ -1,6 +1,7 @@
 import java.util.List;
 import java.util.ArrayList;
 
+
 /**
  * The Deck class represents a shuffled deck of cards.
  * It provides several operations including
@@ -19,6 +20,7 @@ public class Deck {
 	 * The next card to be dealt is at size - 1.
 	 */
 	private int size;
+	private Card c;
 
 
 	/**
@@ -30,8 +32,16 @@ public class Deck {
 	 * @param values is an array containing all of the card point values.
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		cards+=ranks;
+		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */		
+		cards = new ArrayList<Card>();
+		for (int si = 0; si < 5; si++)
+		{
+		    for(int rv = 0;rv <= ranks.length; rv ++)
+		    {
+		        c = new Card(ranks[rv], suits[si], values[rv]);
+		      }
+		  }				
+		cards.add(c);
 	}
 
 
@@ -41,7 +51,7 @@ public class Deck {
 	 */
 	public boolean isEmpty() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		
+		return cards.isEmpty();
 	}
 
 	/**
@@ -50,6 +60,7 @@ public class Deck {
 	 */
 	public int size() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		return cards.size();
 	}
 
 	/**
@@ -67,6 +78,9 @@ public class Deck {
 	 */
 	public Card deal() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		Card deal = cards.get(0);
+		cards.remove(0);
+		return deal;
 	}
 
 	/**
